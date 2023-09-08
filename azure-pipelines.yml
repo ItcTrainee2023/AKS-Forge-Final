@@ -35,11 +35,9 @@ stages:
             backendServiceArm: 'terraform-aks-azurerm-svc-con'
             backendAzureRmSubscriptionId: '606e824b-aaf7-4b4e-9057-b459f6a4436d'
             ensureBackend: true
-            backendAzureRmResourceGroupName: 'Stefans-Resource-Group'
-            backendAzureRmResourceGroupLocation: 'Canada Central'
-            backendAzureRmStorageAccountName: 'stefanstorage2496'
-            backendAzureRmStorageAccountSku: 'Standard_LRS'
-            backendAzureRmContainerName: 'data'
+            backendAzureRmResourceGroupName: 'Capstonedemoniaz1'
+            backendAzureRmStorageAccountName: 'tstatestorageniaz'
+            backendAzureRmContainerName: 'tfstatefiles1'
             backendAzureRmKey: 'aks-demo.tfstate'
             allowTelemetryCollection: false
         - task: TerraformCLI@0
@@ -71,10 +69,9 @@ stages:
                 backendType: 'azurerm'
                 backendServiceArm: 'terraform-aks-azurerm-svc-con'
                 ensureBackend: true
-                backendAzureRmResourceGroupName: 'Stefans-Resource-Group'
-                backendAzureRmResourceGroupLocation: 'Canada Central'
-                backendAzureRmStorageAccountName: 'stefanstorage2496'
-                backendAzureRmContainerName: 'data'
+                backendAzureRmResourceGroupName: 'Capstonedemoniaz1'
+                backendAzureRmStorageAccountName: 'tstatestorageniaz'
+                backendAzureRmContainerName: 'tfstatefiles1'
                 backendAzureRmKey: 'aks-$(DEV_ENVIRONMENT).tfstate'
                 allowTelemetryCollection: false
             - task: TerraformCLI@0
