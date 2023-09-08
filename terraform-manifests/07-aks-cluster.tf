@@ -76,7 +76,7 @@ network_profile {
   network_plugin = "azure"
 }
 
-# AKS Cluster Tags 
+ #AKS Cluster Tags 
 tags = {
   Environment = var.environment
 }
